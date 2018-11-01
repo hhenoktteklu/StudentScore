@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation</title>
+</head>
+<body>
+<b>First name: </b><span th:text="${student.firstName}"></span><br/>
+<b>Last name: </b><span th:text="${student.lastName}"></span><br/>
+<b>Major: </b><span th:text="${student.major}"></span><br/>
+<h4>Student successfully created!</h4>
+<a th:href="@{/}">Back to home page</a>
+
+</body>
+</html>

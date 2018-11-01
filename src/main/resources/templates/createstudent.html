@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Student</title>
+</head>
+<body>
+ <h4>Create new student</h4>
+
+<form th:action="@{/processstudent}" th:object="${student}" method="post">
+    First name: <input type="text" th:field="*{firstName}">
+    Last name: <input type="text" th:field="*{lastName}">
+    Major:
+    <select th:field="*{major}">
+        <option value="Biology">Biology</option>
+        <option value="Geography">Geography</option>
+        <option value="Physics">Physics</option>
+        <option value="Math">Math</option>
+    </select>
+
+    <input type="submit" value="Create">
+</form>
+</body>
+</html>
